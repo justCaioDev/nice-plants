@@ -3,6 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
  :root {
     --main-font: "Kodchasan", sans-serif;
     --secondary-font: "Inter", sans-serif;
@@ -14,7 +23,320 @@
  body {
     width: 100%;
     height: 100vh;
-    
+
     font-family: var(--main-font);
     background-color: var(--bg-color);
+    color: #fff;
+ }
+
+ main {
+    height: 100vh;
+
+    background-image: url(../assets/hero-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+
+ main header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 40px;
+    background-image: linear-gradient(to top, #00000021, #000000db);
+    z-index: 1000;
+ }
+
+ header .logo-header {
+    width: 10rem;
+ }
+
+ header .nav-header {
+    display: flex;
+    gap: 7.5rem;
+ }
+
+ header .nav-header a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.25rem;
+    
+    transition: color .3s;
+ }
+
+ header .nav-header a:hover {
+    color: #989898;
+ }
+
+ main .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+
+    width: 100%;
+    height: 100vh;
+ }
+
+ .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+
+    width: 30.313rem;
+ }
+
+ .hero-content h1 {
+    font-weight: 600;
+    font-size: 2.25rem;
+ }
+
+ .hero-content p {
+    font-size: 1rem;
+    text-align: justify;
+ }
+
+ .hero-content button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 11.875rem;
+    height: 2.5rem;
+
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 18px;
+    cursor: pointer;
+    
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 1.25rem;
+
+    transition: .3s ease-in-out;
+ }
+
+ .hero-content button:hover {
+    background-color: #d2d2d1;
+    scale: 110%;
+ }
+
+ .hero-content button .fa-whatsapp {
+    color: #32D951;
+    font-size: 1.4rem;
+    font-weight: 500;
+ }
+ 
+
+ .hero-content img {
+    width: 7.5rem;
+    height: 2.188rem;
+ }
+
+ .hero .hero-img {
+    width: 26.25rem;
+ }
+
+ .cta-bg {
+    position: relative;
+
+    height: 100vh;
+
+    background-image: url(../assets/cta-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+
+ .cta-bg .top-arrow {
+    position: absolute;
+    top: -7%;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+
+ .cta-bg .bottom-arrow {
+    position: absolute;
+    bottom: -13%;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+
+ .cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.875rem;
+
+    height: 100%;
+ }
+
+ .cta-content h2 { 
+    width: 46.25rem;
+
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+ }
+
+ .cta-content p {
+    width: 31.25rem;
+
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 300;
+ }
+
+ .cta-content button {
+    width: 17.188rem;
+    height: 3.75rem;
+
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 1.25rem;
+    text-align: center;
+    color: #fff;
+
+    background-color: #3FC036;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    transition: .3s ease-in-out;
+ }
+
+ .cta-content button:hover {
+    background-color: #60d957;
+    scale: 105%;
+ }
+
+ #about-us {
+    position: relative;
+
+    color: #000;
+ }
+
+ #about-us .about-us {
+    width: 30rem;
+
+    margin: 120px auto 30px 120px;
+ }
+ 
+ .about-us h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+
+    margin-bottom: 30px;
+ }
+
+ .about-us p {
+    font-size: 1.25rem;
+    text-align: justify;
+ }
+
+ #about-us .our-mission {
+    width: 30rem;
+
+    margin: 65px 120px 30px auto;
+    ;
+ }
+
+ #about-us .align-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: right;
+    
+
+    width: 100%;
+    height: auto;
+ }
+
+ .our-mission h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: right;
+
+    margin-bottom: 30px;
+ }
+
+ .our-mission p {
+    font-size: 1.25rem;
+    text-align: justify;
+ }
+
+ #about-us .our-vision {
+    width: 30rem;
+
+    margin: 65px auto 30px 120px;
+ }
+
+ .our-vision h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+
+    margin-bottom: 30px;
+ }
+
+ .our-vision p {
+    font-size: 1.25rem;
+    text-align: justify;
+
+    margin-bottom: 100px;
+ }
+
+ #about-us img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 13.438rem;
+ }
+
+ footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: 22.5rem;
+
+    background-image: linear-gradient(to top, #080400, var(--bg-footer));
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.656);
+ }
+
+ footer button {
+    width: 17.188rem;
+    height: 3.75rem;
+
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 1.25rem;
+    text-align: center;
+    color: #fff;
+
+    background-color: #3FC036;
+    margin-top: 150px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    transition: .3s ease-in-out;
+ }
+
+ footer button:hover {
+    background-color: #60d957;
+    scale: 105%;
+ }
+
+ footer p {
+    margin-bottom: 35px;
  }
